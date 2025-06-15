@@ -12,6 +12,7 @@
       --text-color: #000;
       --bg-color: #fff;
       --accent-color: #fef5f5;
+      --highlight-color: #d4a5a5; /* similar to top bar text */
     }
 
     body {
@@ -72,7 +73,11 @@
     .hero h1 {
       font-size: 48px;
       font-style: italic;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
+    }
+
+    .hero h1 span {
+      color: var(--highlight-color);
     }
 
     .hero a {
@@ -80,8 +85,20 @@
       text-decoration: underline;
       font-size: 14px;
       color: var(--text-color);
+      margin-top: 40px;
     }
 
+  .hero h1 {
+    font-size: 48px;
+    font-style: italic;
+    margin-bottom: 40px;
+    animation: fadeInSlide 1.2s ease-out forwards;
+  }
+
+  .hero h1 span {
+    color: #e7bcbc;
+  }
+    
     .collection-preview {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -118,29 +135,188 @@
       <i class="fas fa-bag-shopping"></i>
     </div>
   </header>
-
+  
   <section class="hero">
-  <h1>Welcome to styled by sakuranbo</h1>
+    <h1>Welcome to <span>the chic collective</span></h1>
+     <style>
+       animation: fadeInSlide 1.5s ease-out both 
+     </style>
+       
+    <div class="pinterest-gallery">
+      <img src="https://i.pinimg.com/736x/07/7d/6d/077d6dae13b8d4d4435933fe6ce3d881.jpg" alt="Img 1" />
+      <img src="https://i.pinimg.com/736x/5b/a4/dc/5ba4dc01dbc7b9eb7ae57a5a6c880cb9.jpg" alt="Img 2" />
+      <img src="https://i.pinimg.com/736x/9a/e6/01/9ae60186e06edd0f1ebdbc62e4368b47.jpg" alt="Img 3" />
+      <img src="https://i.pinimg.com/736x/19/00/09/190009c06fc4740e0d0e81f8d836833b.jpg" alt="Img 5" />
+      <img src="https://i.pinimg.com/736x/10/c4/22/10c42270464f25b32f8b7e839879fd27.jpg" alt="Img 6" />
+      <img src="https://i.pinimg.com/736x/3f/21/a2/3f21a2a9563e498f8978b76730433c3c.jpg" alt="Img 7" />
+      <img src="https://i.pinimg.com/736x/ae/6d/cc/ae6dcc50eb0f1c00fed376e2c13d9291.jpg" alt="Img 9" />
+      <img src="https://i.pinimg.com/736x/df/34/38/df3438c0bf8cc03fd4f977f007037b5d.jpg" alt="Img 10" />
+      <img src="https://i.pinimg.com/736x/3c/a6/ef/3ca6efe64581580fe00fe2cf72174679.jpg" alt="Img 11" />
+      <img src="https://i.pinimg.com/736x/80/10/3b/80103b237ba5a16b6fa6f90162c21a16.jpg" alt="Img 12" />
+      <img src="https://i.pinimg.com/736x/ae/99/02/ae9902cf74363e40e3b87ed0e7aae47a.jpg" alt="Img 13" />
+      <img src="https://i.pinimg.com/736x/98/13/ab/9813ab28b0c2f43fa70d3cf7f9d0ffa5.jpg" alt="Img 14" />
+      <img src="https://i.pinimg.com/736x/33/00/d2/3300d2b728d4f0549d28058cf8f5eae7.jpg" alt="Img 15" />
+      <img src="https://i.pinimg.com/736x/6d/8f/34/6d8f34a1e444d5e053ef1d0242242fce.jpg" alt="Img 16" />
+      <img src="https://i.pinimg.com/736x/15/39/3e/15393ef725332eec456d2abd7a007993.jpg" alt="Img 17" />
+      <img src="https://i.pinimg.com/736x/fc/a1/00/fca100cd5efcc0cc0af64b2dfdf652cb.jpg" alt="Img 19" />
+      <img src="https://i.pinimg.com/736x/45/b5/d7/45b5d77b23c09742d131cafaf7731895.jpg" alt="Img 20" />
+      <img src="https://i.pinimg.com/736x/bb/c6/09/bbc60955cd39dfb4416b892371be0277.jpg" alt="Img 21" />
+    </div>
+    <style>
+          .pinterest-gallery {
+      column-count: 6;
+      column-gap: 15px;
+      margin: 0 auto;
+      max-width: 1200px;
+    }
 
-  <div class="pinterest-gallery">
-    <img src="https://i.pinimg.com/736x/07/7d/6d/077d6dae13b8d4d4435933fe6ce3d881.jpg" alt="Img 1" />
-    <img src="https://via.placeholder.com/400x300?text=Img2" alt="Img 2" />
-    <img src="https://via.placeholder.com/400x600?text=Img3" alt="Img 3" />
-    <img src="https://via.placeholder.com/400x350?text=Img4" alt="Img 4" />
-    <img src="https://via.placeholder.com/400x400?text=Img5" alt="Img 5" />
-    <img src="https://via.placeholder.com/400x550?text=Img6" alt="Img 6" />
-  </div>
+    .pinterest-gallery img {
+      width: 100%;
+      margin-bottom: 15px;
+      border-radius: 12px;
+      display: block;
+      break-inside: avoid;
+    }
 
-  <a href="#">View Collection</a>
-</section>
+    @media (max-width: 768px) {
+      .pinterest-gallery {
+        column-count: 2;
+      }
+    }
 
-  <section class="collection-preview">
-    <img src="https://via.placeholder.com/400x600?text=Item+1" alt="Item 1">
-    <img src="https://via.placeholder.com/400x600?text=Item+2" alt="Item 2">
-    <img src="https://via.placeholder.com/400x600?text=Item+3" alt="Item 3">
-    <img src="https://via.placeholder.com/400x600?text=Item+4" alt="Item 4">
+    @media (max-width: 480px) {
+      .pinterest-gallery {
+        column-count: 1;
+      }
+    }
+
+    @keyframes fadeInSlide {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+    </style>
+    <a href="#">View Collection</a>
   </section>
 
+<section class="blossom-section">
+  <div class="blossom-title-vertical">
+    <h2><em>sakuranbo blossom</em></h2>
+  </div>
+
+  <div class="blossom-images">
+    <!-- tus imágenes -->
+  </div>
+
+  <div class="blossom-scroll-text">
+    <span>sakuranbo blossom</span>
+    <span>sakuranbo blossom</span>
+    <span>sakuranbo blossom</span>
+    <span>sakuranbo blossom</span>
+    <span>sakuranbo blossom</span>
+    <span>sakuranbo blossom</span>
+    <span>sakuranbo blossom</span>
+  </div>
+  <style>
+
+    .blossom-title-vertical {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      transform: rotate(180deg);
+      height: 300px;
+      overflow: hidden;
+      font-family: var(--main-font);
+      margin-right: 30px;
+      color: #d4a5a5;
+    }
+
+    .blossom-scroll-text {
+      display: flex;
+      flex-direction: column;
+      animation: scrollTextVertical 10s linear infinite;
+    }
+  
+    .blossom-scroll-text span {
+      font-size: 18px;
+      margin: 10px 0;
+      white-space: nowrap;
+    }
+    
+    @keyframes scrollTextVertical {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+    
+    .blossom-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      background-color: #fef5f5;
+      padding: 60px 20px;
+      animation: fadeInSlide 1.5s ease-out both;
+    }
+
+    .blossom-images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      max-width: 500px;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .blossom-images img {
+      width: 160px;
+      border-radius: 16px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .blossom-text {
+      flex: 1;
+      max-width: 500px;
+      padding: 20px 40px;
+      text-align: center;
+    }
+
+    .blossom-text h2 {
+      font-family: var(--main-font);
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .blossom-text p {
+      font-size: 14px;
+      color: #444;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .blossom-text button {
+      background: white;
+      border: 1px solid #ccc;
+      padding: 10px 20px;
+      font-size: 13px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .blossom-text button:hover {
+      background-color: #fcecec;
+    }
+
+  </section>
+  
   <footer class="footer">
     © 2025 styled by sakuranbo. All rights reserved.
   </footer>
